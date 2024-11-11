@@ -8,7 +8,7 @@ Those generated sentences were then **re-ranked** using **InLegalBERT** and **BE
 * For indexing all the crime-related documents, **Lucence 8.11** (https://www.apache.org/dyn/closer.lua/lucene/java/8.11.2/lucene-8.11.2-src.tgz) was installed.
 
 # Dataset:
-For all the experiments we used **Indian Supreme Court** proceedings.
+For all the experiments we used **Indian Supreme Court** proceedings. For the dataset, please email sa21rs094@iiserkol.ac.in.
 # Few-shot learning using GPT-3.5-turbo model:
 For training, we used 10 sentences for _riot_ and _evidence_. <br>
 In your favorite virtual environment, simply do:
