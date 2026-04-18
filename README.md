@@ -1,19 +1,59 @@
-# Automated Attributes Extraction using Large Language Models
-As we mentioned in our paper, two law students annotated **200 crime-related** documents. To annotate those documents they mainly used **seven** attributes- _expertwittest_, _wittest_, _assault_, _riot_, _homicide_, _imprisonment_, _evidence_. Our goal is to leverage automation in order to extract fine-grained information from the documents. To enhance the effectiveness of automatically extracting these attributes from legal documents within a sequence labeling framework, we propose the utilization of a few-shot learning approach based on Large Language Models (LLMs). Moreover, we demonstrate the efficacy of the extracted attributes in two distinct downstream tasks, namely legal judgment prediction and legal statute prediction.
-# Flair model
- As the initial step, we fine-tuned the flair model using annotated sentences for each attribute. <br>
-Later we used our annotated sentences as a **query** to generate more sentences for a particular attribute. For this experiment, first indexed every sentence of a document using **Lucene**.<br>
-Those generated sentences were then **re-ranked** using **InLegalBERT** and **BERT-uncased** embeddings. After that, we selected top-k sentences and append them to annotated set. <br>
+# Automated Attribute Extraction using Large Language Models
 
-* For indexing all the crime-related documents, **Lucence 8.11** (https://www.apache.org/dyn/closer.lua/lucene/java/8.11.2/lucene-8.11.2-src.tgz) was installed.
+This repository focuses on **automated attribute extraction** from legal documents using **Large Language Models (LLMs)**.
 
-# Dataset:
-For all the experiments we used **Indian Supreme Court** proceedings. For the dataset, please email sa21rs094@iiserkol.ac.in.
-# Few-shot learning using GPT-3.5-turbo model:
-For training, we used 10 sentences for _riot_ and _evidence_. <br>
-In your favorite virtual environment, simply do:
-```ruby
-!pip install openai
+As described in our paper, **two law students annotated 200 crime-related documents** using the following seven attributes:
+
+- `expertwitness`
+- `witness`
+- `assault`
+- `riot`
+- `homicide`
+- `imprisonment`
+- `evidence`
+
+Our goal is to **extract fine-grained legal information automatically** within a **sequence labeling framework**. To achieve this, we leverage **few-shot learning with LLMs**, significantly improving extraction performance.
+
+We further demonstrate the effectiveness of these extracted attributes in downstream tasks:
+- Legal Judgment Prediction  
+- Legal Statute Prediction  
+
+---
+
+## Methodology
+
+### Flair Model (Initial Step)
+
+- Fine-tuned a **Flair model** using annotated sentences for each attribute  
+- Used annotated sentences as **queries** to retrieve similar sentences  
+
+#### Retrieval Pipeline
+- Indexed all sentences using **Apache Lucene (v8.11)**
+- Retrieved candidate sentences
+- Re-ranked them using:
+  - **InLegalBERT**
+  - **BERT-uncased**
+- Selected **top-k sentences** and augmented the training set
+
+---
+
+## Dataset
+
+- Domain: **Indian Supreme Court proceedings**
+- Access: Available upon request  
+
+Please contact: `sa21rs094@iiserkol.ac.in`
+
+---
+
+## 🤖 Few-shot Learning with GPT-3.5
+
+We use **few-shot prompting** to generate additional training samples.
+
+### Setup
+
+```bash
+pip install openai
 ```
 ```ruby
 import openai
