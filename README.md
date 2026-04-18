@@ -93,7 +93,21 @@ It is also important to note that there is no evidence to support the contention
 
 There is no evidence to support the claim that there was a deliberate attempt to cover up the truth about the events of 9/11. There is, however, some evidence that the official story is not the whole truth and that some of the facts may not be as they are being presented to the public.
 ```
-# Judgemnet prediction:
+# Judgment prediction:
 Our primary focus in this study revolved around two types of judgments: "accept" and "reject." Consequently, this particular aspect posed a binary classification problem. For the embedding of each document, we used **InLegalBERT** (https://arxiv.org/pdf/2209.06049.pdf) and **BERT-uncased** (https://arxiv.org/pdf/1810.04805.pdf).
+
+## 📄 Citation
+
+If you use this work, please cite:
+
+```bibtex
+@article{adhikary2024case,
+  title={A Case Study for Automated Attribute Extraction from Legal Documents Using Large Language Models},
+  author={Adhikary, Subinay and Sen, Procheta and Roy, Dwaipayan and Ghosh, Kripabandhu},
+  journal={Artificial Intelligence and Law},
+  pages={1--22},
+  year={2024},
+  publisher={Springer}
+}
 
 
