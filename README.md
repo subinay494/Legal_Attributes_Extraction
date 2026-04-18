@@ -46,7 +46,7 @@ Please contact: `sa21rs094@iiserkol.ac.in`
 
 ---
 
-## 🤖 Few-shot Learning with GPT-3.5
+## Few-shot Learning with GPT-3.5
 
 We use **few-shot prompting** to generate additional training samples.
 
@@ -104,7 +104,7 @@ This should print:
 9. The witness statements contain many inconsistencies, making it hard to determine what really happened.
 10. The evidence presented by the prosecution doesn't seem to match up with the timeline of events, creating doubt about the veracity of their claims.
 ```
-# Text generation using GPT-2 model:
+# Text generation using GPT-2 model
 Here, we used GPT-2 pertained model. <br>
 For _riot_ and _evidence_ used 10 sentences to generate another 10 sentences.
 For example: <br>
@@ -133,7 +133,7 @@ It is also important to note that there is no evidence to support the contention
 
 There is no evidence to support the claim that there was a deliberate attempt to cover up the truth about the events of 9/11. There is, however, some evidence that the official story is not the whole truth and that some of the facts may not be as they are being presented to the public.
 ```
-# Judgment prediction:
+# Judgment prediction
 Our primary focus in this study revolved around two types of judgments: "accept" and "reject." Consequently, this particular aspect posed a binary classification problem. For the embedding of each document, we used **InLegalBERT** (https://arxiv.org/pdf/2209.06049.pdf) and **BERT-uncased** (https://arxiv.org/pdf/1810.04805.pdf).
 
 ## 📄 Citation
